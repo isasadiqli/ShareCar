@@ -1,27 +1,17 @@
 package com.example.sharecar;
 
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.util.TypedValue;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
-import android.text.Layout;
-import android.text.format.DateFormat;
-import android.util.TypedValue;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -66,10 +56,6 @@ public class MessagingActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         MessagingAdapter adapter = new MessagingAdapter(this, messages);
         recyclerView.setAdapter(adapter);
-
-
-        /*listView = findViewById(R.id.list_of_messages);*/
-
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Messages");
         databaseReference.addValueEventListener(new ValueEventListener() {

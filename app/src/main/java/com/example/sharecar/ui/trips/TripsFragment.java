@@ -18,9 +18,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.sharecar.MDate;
 import com.example.sharecar.NavigationActivity;
 import com.example.sharecar.R;
-import com.example.sharecar.TripsRecyclerViewAdapter;
 import com.example.sharecar.Tools;
 import com.example.sharecar.Trip;
+import com.example.sharecar.TripsRecyclerViewAdapter;
 import com.example.sharecar.databinding.FragmentTripsBinding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -33,7 +33,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
-import java.util.List;
 
 public class TripsFragment extends Fragment {
 

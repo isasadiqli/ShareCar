@@ -79,9 +79,6 @@ public class NavigationActivity extends AppCompatActivity {
         int[] hour = {calendar.get(Calendar.HOUR_OF_DAY)};
         int[] minute = {calendar.get(Calendar.MINUTE)};
 
-        String[] time = {"", ""};
-
-
         dateTextView.setOnClickListener(v -> {
 
             dialog.dismiss();
@@ -116,7 +113,6 @@ public class NavigationActivity extends AppCompatActivity {
                 month[0] = month1;
                 day[0] = dayOfMonth;
 
-                time[1] += "   " + day[0] + "." + month[0] + "." + year[0];
                 timePickerDialog.show();
             };
 

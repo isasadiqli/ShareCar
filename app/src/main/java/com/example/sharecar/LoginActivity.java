@@ -1,8 +1,5 @@
 package com.example.sharecar;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,20 +7,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.io.File;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -90,19 +82,16 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Error happened while signing in", Toast.LENGTH_SHORT).show();
                 else {
                     WelcomeActivity.firstCallback = true;
-                    Tools.readUserInfo("login", new FirebaseCallback() {
-                        @Override
-                        public void onCallBack(User user) {
-                            if (WelcomeActivity.firstCallback) {
-                                Intent intent = new Intent(LoginActivity.this, NavigationActivity.class);
-                                finish();
-                                startActivity(intent);
-                                WelcomeActivity.firstCallback = false;
-                                progressBar.setVisibility(View.GONE);
-                                for (int i = 0; i < layout.getChildCount(); i++) {
-                                    View child = layout.getChildAt(i);
-                                    child.setEnabled(true);
-                                }
+                    Tools.readUserInfo(user -> {
+                        if (WelcomeActivity.firstCallback) {
+                            Intent intent = new Intent(LoginActivity.this, NavigationActivity.class);
+                            finish();
+                            startActivity(intent);
+                            WelcomeActivity.firstCallback = false;
+                            progressBar.setVisibility(View.GONE);
+                            for (int i = 0; i < layout.getChildCount(); i++) {
+                                View child = layout.getChildAt(i);
+                                child.setEnabled(true);
                             }
                         }
                     });

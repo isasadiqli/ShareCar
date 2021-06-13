@@ -32,9 +32,9 @@ import java.util.ArrayList;
 
 public class PeopleFragment extends Fragment {
 
-    RecyclerView userRecyclerView;
-    ArrayList<User> userList;
-    UserListAdapter userListAdapter;
+    private RecyclerView userRecyclerView;
+    private ArrayList<User> userList;
+    private UserListAdapter userListAdapter;
 
     private PeopleViewModel slideshowViewModel;
     private FragmentPeopleBinding binding;

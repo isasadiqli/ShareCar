@@ -1,6 +1,5 @@
 package com.example.sharecar;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;

@@ -192,7 +192,7 @@ public class Tools {
         });
     }
 
-    public static void readUserInfo(String location, FirebaseCallback firebaseCallback) {
+    public static void readUserInfo(FirebaseCallback firebaseCallback) {
         userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users");
@@ -233,45 +233,6 @@ public class Tools {
             else
                 Toast.makeText(context, "There has been an error while adding new trip", Toast.LENGTH_SHORT).show();
         });
-    }
-
-    public static String readFromFile(Context context, String fileName) {
-
-        String ret = "";
-
-        try {
-            InputStream inputStream = context.openFileInput(fileName);
-
-            if (inputStream != null) {
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                String receiveString = "";
-                StringBuilder stringBuilder = new StringBuilder();
-
-                while ((receiveString = bufferedReader.readLine()) != null) {
-                    stringBuilder.append("").append(receiveString);
-                }
-
-                inputStream.close();
-                ret = stringBuilder.toString();
-            }
-        } catch (FileNotFoundException e) {
-            Log.e("login activity", "File not found: " + e.toString());
-        } catch (IOException e) {
-            Log.e("login activity", "Can not read file: " + e.toString());
-        }
-
-        return ret;
-    }
-
-    public static void writeToFile(String data, Context context, String fileName) {
-        try {
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput(fileName, Context.MODE_PRIVATE));
-            outputStreamWriter.write(data);
-            outputStreamWriter.close();
-        } catch (IOException e) {
-            Log.e("Exception", "File write failed: " + e.toString());
-        }
     }
 
 }

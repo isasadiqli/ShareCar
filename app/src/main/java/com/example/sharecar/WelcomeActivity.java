@@ -1,13 +1,11 @@
 package com.example.sharecar;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -24,12 +22,11 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        //mAuth.addAuthStateListener(firebaseAuthListener);
         mAuth = FirebaseAuth.getInstance();
 
         if (mAuth.getCurrentUser() != null) {
             firstCallback = true;
-            Tools.readUserInfo("login", user -> {
+            Tools.readUserInfo(user -> {
                 if(firstCallback) {
                     Intent intent = new Intent(WelcomeActivity.this, NavigationActivity.class);
                     finish();

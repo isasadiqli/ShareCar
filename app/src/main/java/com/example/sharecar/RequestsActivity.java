@@ -1,18 +1,15 @@
 package com.example.sharecar;
 
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.util.TypedValue;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
-import android.util.TypedValue;
-import android.view.MenuItem;
-import android.widget.Toast;
-
-import com.google.firebase.database.DatabaseReference;
 
 import java.util.ArrayList;
 import java.util.HashMap;

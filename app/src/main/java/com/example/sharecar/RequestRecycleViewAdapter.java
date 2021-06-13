@@ -23,13 +23,13 @@ import java.util.Map;
 
 public class RequestRecycleViewAdapter extends RecyclerView.Adapter<RequestRecycleViewAdapter.RequestRecycleViewHolder> {
 
-    Context context;
-    HashMap<String, User> pendingUsers;
-    ArrayList<String> cities;
-    String tripKey;
+    private Context context;
+    private HashMap<String, User> pendingUsers;
+    private ArrayList<String> cities;
+    private String tripKey;
 
-    ArrayList<User> users;
-    ArrayList<String> keys;
+    private ArrayList<User> users;
+    private ArrayList<String> keys;
 
     public RequestRecycleViewAdapter(Context context, HashMap<String, User> pendingUsers,
                                      ArrayList<String> cities, String tripKey) {

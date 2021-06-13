@@ -20,7 +20,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Map;
