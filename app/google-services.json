@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1041176910217",
+    "firebase_url": "https://sharecar-c7bd4-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "sharecar-c7bd4",
+    "storage_bucket": "sharecar-c7bd4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041176910217:android:54a41cbc30bcdcc1bca958",
+        "android_client_info": {
+          "package_name": "com.example.sharecar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1041176910217-dmfi043j2qf77tnvq0ib9768kgr7elqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQFbsM0f6Dfgt9q5W_HAjf5ijtefv_Eik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1041176910217-dmfi043j2qf77tnvq0ib9768kgr7elqi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
